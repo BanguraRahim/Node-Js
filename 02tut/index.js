@@ -1,5 +1,4 @@
 const fsPromises = require('fs').promises;
-const { writeFile } = require('fs');
 const path = require('path')
 /*
 fs.readFile(path.join(__dirname, 'files','starter.txt'),'utf8', (err, data) => {
@@ -39,7 +38,7 @@ process.on('uncaughtException', err => {
 const fileOps = async () => {
   try {
     const data = await fsPromises.readFile(path.join(__dirname, 'files','starter.txt'),'utf8');
-    await fsPromises.unlink(path.join(__dirname, 'files','starter.txt'));
+    await fsPromises.unlink(path.join(__dirname, 'files','starter.txt'),'utf8');
     console.log(data);
     await fsPromises.writeFile(path.join(__dirname, 'files', 'promiseWrite.txt'), data);
     await fsPromises.appendFile(path.join(__dirname, 'files', 'promiseWrite.txt'), '\n\nNice to meet you');
