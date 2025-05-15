@@ -6,7 +6,13 @@ data.employees = require('../../data/employees.json');
 
 router.route('/')
     .get((req, res) => {
-        res.json(data.employees);
+        if(data.employees) {
+            res.json(data.employees);
+        }
+        else {
+            res.status(404).json({error: "Employees not found"});
+        }
+        
     })
     .post((req, res) => {
         if (!req.body.firstname || !req.body.lastname) {
