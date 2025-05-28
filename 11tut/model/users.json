@@ -1,0 +1,11 @@
+[
+  {
+    "username": "walt2",
+    "password": "$2b$10$iy5LANDYSTcc35lKTZMX2OQjRWSzt6MsyIUnDjHZyEIIz/5DxRMHy"
+  },
+  {
+    "username": "walt1",
+    "password": "$2b$10$nIJP8GrWUJ.0A6V/.ZMFYuAskRie71Xjj.smnj0A3lnbu4x2q0kdy",
+    "refreshToken": ""
+  }
+]
